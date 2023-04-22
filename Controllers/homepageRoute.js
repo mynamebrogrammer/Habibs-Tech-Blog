@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Posts } = require("../Models");
+const { User, Posts } = require("../models");
 const withAuth = require("../utils/auth");
 
 // GET all posts for homepage or dashboard
@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
         },
       ],
     });
-
+    console.log(postData);
     // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
 
@@ -79,3 +79,5 @@ router.get("/login", (req, res) => {
     
     res.render("login");
     });
+
+module.exports = router;
