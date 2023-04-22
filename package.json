@@ -11,7 +11,9 @@
     "sequelize": "^6.30.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/seed.js"
   },
   "name": "habibs-tech-blog",
   "version": "1.0.0",
