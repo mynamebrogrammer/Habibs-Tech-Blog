@@ -31,6 +31,7 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      salt: true,
       validate: {
         len: [8],
       },
@@ -55,4 +56,5 @@ User.init(
   }
 );
 
+bcrypt.hashSync('password123', 10);
 module.exports = User;

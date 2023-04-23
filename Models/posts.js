@@ -37,14 +37,7 @@ Posts.init(
             },
         },
     },
-    // now we need to configure the hooks to hash the password
     {
-        hooks: {   
-            beforeCreate: async (newUserData) => {
-                newUserData.password = await bcrypt.hash(newUserData.password, 10);
-                return newUserData;
-            },
-        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
@@ -52,5 +45,7 @@ Posts.init(
         modelName: 'posts',
     }
 );
+
+bcrypt.hashSync('password123', 10);
 
 module.exports = Posts;
