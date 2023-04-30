@@ -1,12 +1,10 @@
 [
   {
-    "username": "Test subject",
-    "password": "password123",
-    "email": "test@email.com"
+    "username": "admin",
+    "password": "admin"
   },
   {
-    "username": "Test subject 2",
-    "password": "password123",
-    "email": "some@test.com"
+    "username": "user",
+    "password": "password1234"
   }
 ]
