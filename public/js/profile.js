@@ -1,44 +1,30 @@
-const newFormHandler = async (event) => {
+async function commentFormHandler(event) {
   event.preventDefault();
-// creating a user profile
-  const name = document.querySelector('#profile-name').value.trim();
 
-  if (name) {
-    const response = await fetch(`/api/profile`, {
+  const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
+
+  const post_id = window.location.toString().split('/')[
+    window.location.toString().split('/').length - 1
+  ];
+
+  if (comment_text) {
+    const response = await fetch('/api/comments', {
       method: 'POST',
-      body: JSON.stringify({ name }),
+      body: JSON.stringify({
+        post_id,
+        comment_text
+      }),
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to create profile');
-    }
-  }
-};
-
-const loginFormHandler = async (event) => {
-  event.preventDefault();
-// logging in
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
-
-  if (email && password) {
-    const response = await fetch('/api/users/login', {
-      method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-    console.log(response);
-
-    if (response.ok) {
-      document.location.replace('/profile');
+      document.location.reload();
     } else {
       alert(response.statusText);
-      console.log(response);
     }
   }
-};
+}
+
+document.querySelector('.comment-form').addEventListener('submit', commentFormHandler);

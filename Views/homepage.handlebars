@@ -1,9 +1,7 @@
-<!-- Loop over each object in the posts array --> 
-{{#each posts}}
-    <!-- Display the title of the post --> 
-    <h1>{{title}}</h1>
-    <!-- Display the content of the post --> 
-    <p>{{content}}</p>
-{{/each}}
-
-
+<ol class="post-list">
+  {{#each posts as |post|}}
+  <li>
+    {{> post-info post}}
+  </li>
+  {{/each}}
+</ol>
