@@ -5,8 +5,8 @@ const withAuth = require("../../utils/auth");
 // get all posts
 router.get("/", (req, res) => {
   Post.findAll({
-    attributes: ["id", "title", "post_text", "created_at"],
-    order: [["created_at", "DESC"]],
+    attributes: ["id", "title", "post_text", ],
+    order: [["id","DESC"]],
     include: [
       {
         model: User,
@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
       },
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "post_id", "user_id", ],
         include: {
           model: User,
           attributes: ["username"],
@@ -34,7 +34,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "title", "post_text", "created_at"],
+    attributes: ["id", "title", "post_text", ],
     include: [
       {
         model: User,
@@ -42,7 +42,7 @@ router.get("/:id", (req, res) => {
       },
       {
         model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+        attributes: ["id", "comment_text", "post_id", "user_id", ],
         include: {
           model: User,
           attributes: ["username"],

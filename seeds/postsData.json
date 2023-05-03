@@ -1,6 +1,14 @@
 [
   {
     "title": "The 10 Best Places to Eat in the World",
-    "post_text": "Lorem ipsum dolor sit amet"
+    "post_text": "Lorem ipsum dolor sit amet",
+    "user_id": 1,
+    "created_at":""
+  },
+  {
+    "title": "the first post written by developer",
+    "post_text": "Lorem ipsum dolor sit amet",
+    "user_id": 2,
+    "created_at":""
   }
 ]

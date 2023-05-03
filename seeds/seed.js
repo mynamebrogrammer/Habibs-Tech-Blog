@@ -27,6 +27,15 @@ const seedDatabase = async () => {
         });
     }
 
+    const posts = await Post.findAll();
+    for (const comments of commentsData) {
+        await Comment.create({
+        ...comments,
+        user_id: users[Math.floor(Math.random() * users.length)].id,
+        post_id: posts[Math.floor(Math.random() * posts.length)].id,
+        });
+    }
+
     
     
     process.exit(0);

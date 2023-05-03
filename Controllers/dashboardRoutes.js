@@ -66,7 +66,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
       //serialize the data
       const post = dbPostData.get({ plain: true });
       // pass to the template
-      res.render('edit-post', {
+      res.render('editPost', {
         post,
         loggedIn: req.session.loggedIn
       });
@@ -78,7 +78,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 });
 
 router.get('/new', (req, res) => {
-  res.render('new-post');
+  res.render('newPost');
 });
 
 

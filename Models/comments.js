@@ -8,7 +8,8 @@ Comment.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      allowNull: false,
     },
     comment_text: {
       type: DataTypes.STRING,
@@ -32,21 +33,19 @@ Comment.init(
         model: 'post',
         key: 'id'
       }
-    }
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
   },
   {
-    // Pass in our imported sequelize connection (the direct connection to our database)
     sequelize,
-    // we want to set our individual hooks for this model
     individualHooks: true,
-
-    // Don't automatically create createdAt/updatedAt timestamp fields
     timestamps: false,
-    // Don't pluralize name of database table
     freezeTableName: true,
-    // Use underscores instead of camel-casing (i.e. `comment_text` and not `commentText`)
     underscored: true,
-    // Make it so our model name stays lowercase in the database
     modelName: 'comment'
   }
 );
