@@ -1,6 +1,6 @@
 [
     {
-        "comment_text": "This is a comment",
+        "comment_text": "This is a test comment from the db",
         "user_id": 1,
         "post_id": 1
     }

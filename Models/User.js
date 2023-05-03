@@ -44,8 +44,6 @@ User.init(
     },  
     //pass in the imported sequelize connection
     sequelize,
-    // set our individual hooks for this model
-    individualHooks: true,
     // don't automatically create timestamp fields
     timestamps: false,
     // don't plurallize name of database table
