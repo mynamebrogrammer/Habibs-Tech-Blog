@@ -11,14 +11,13 @@
     "sequelize": "^6.30.0"
   },
   "scripts": {
-    "seed":"node seeds/seed.js",
+    "seed": "node seeds/seed.js",
     "start": "node server.js"
   },
   "name": "habibs-tech-blog",
   "version": "1.0.0",
   "description": "where developers can publish their blog posts and comment on other developers’ posts as well.",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mynamebrogrammer/Habibs-Tech-Blog.git"
