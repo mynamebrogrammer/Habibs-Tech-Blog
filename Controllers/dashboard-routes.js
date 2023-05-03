@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment } = require('../Models');
+const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts
@@ -66,7 +66,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
       //serialize the data
       const post = dbPostData.get({ plain: true });
       // pass to the template
-      res.render('editPost', {
+      res.render('edit-post', {
         post,
         loggedIn: req.session.loggedIn
       });
@@ -78,7 +78,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 });
 
 router.get('/new', (req, res) => {
-  res.render('newPost');
+  res.render('new-post');
 });
 
 
