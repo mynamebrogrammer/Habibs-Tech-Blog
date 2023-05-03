@@ -12,7 +12,8 @@
   },
   "scripts": {
     "seed": "node seeds/seed.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon server.js"
   },
   "name": "habibs-tech-blog",
   "version": "1.0.0",
