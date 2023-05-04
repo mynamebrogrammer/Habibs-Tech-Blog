@@ -36,7 +36,7 @@ header a:hover {
 }
 
 button {
-  background-color: #000000;
+  background-color: #225ca3;
   border: 0;
   padding: 1%;
   color: white;
@@ -47,13 +47,13 @@ button {
 }
 
 button:hover {
-  background-color: #4F200D;
+  background-color: lightsteelblue;
 }
 
 .post-list {
   margin: 0;
   padding: 0;
-  list-style: none; 
+  list-style: none;  
 }
 
 
@@ -91,7 +91,7 @@ form label {
 }
 
 header {
-  background-color: #4F200D;
+  background-color: lightslategray;
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
@@ -107,7 +107,7 @@ header h1 {
 main {
   flex: 1;
   padding: 2% 4%;
-  background-color: #F6F1E9;
+  background-color: gainsboro;
 }
 
 .btn-no-style {
@@ -137,12 +137,11 @@ main {
 }
 
 .post {
-  background-color: #FF8400;
+  background-color: lightskyblue;
   margin-bottom: 2%;
   line-height: 150%;
   border-color: black;
   border: solid;
-  border-radius: 5px;
 }
 
 .post-head {  
@@ -162,10 +161,8 @@ main {
 }
 
 .post-text {
-  background-color: #F6F1E9;
+  background-color: whitesmoke;
   padding: 3px;
-  margin: 0px;
-  border-radius: 2px;
 }
 
 .edit-link {
@@ -192,8 +189,7 @@ main {
 }
 
 .comment:nth-child(odd) {
-  background-color: #FFD93D;
-  border-radius: 5px;
+  background-color: #fff5eb;
 }
 
 .comment .meta {
@@ -211,7 +207,7 @@ main {
 }
 
 footer {
-  border-top: 1px solid #F6F1E9;
+  border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
   padding: 1%;
